@@ -10,7 +10,7 @@ services:
         GROUP_ID: ${GROUP_ID}
         USER: ${USER}
     user: ${USER_ID}:${GROUP_ID}
-    container_name: calc_env
+    container_name: [container_name]
     ports:
       - "8080:8080"
     volumes:

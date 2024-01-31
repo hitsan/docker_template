@@ -1,3 +1,4 @@
+# FROM any image
 FROM ubuntu:22.04
 
 ARG USER_ID
@@ -14,15 +15,15 @@ RUN groupadd -g ${GROUP_ID} ${USER} && \
 RUN apt-get -y update \
  && apt-get -y --no-install-recommends install \
     git \
+    ssh \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
 # Install package
-RUN apt-get -y update \
- && apt-get -y --no-install-recommends install \
-    
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
+# RUN apt-get -y update \
+#  && apt-get -y --no-install-recommends install \
+#  && apt-get clean \
+#  && rm -rf /var/lib/apt/lists/*
 
 # Set ssh-key
 USER ${USER}

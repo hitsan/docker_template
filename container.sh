@@ -1,8 +1,8 @@
 #!/bin/bash
 
 export CUR_DIR=$(pwd)
-export USER_ID=$(id -u)
-export GROUP_ID=$(id -g)
+export USER_ID=1000
+export GROUP_ID=1000
 export USER=$(whoami)
 
 if [ "$1" = "up" ]; then
