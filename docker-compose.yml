@@ -13,11 +13,11 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ${CUR_DIR}:${HOME}
+      - ${CUR_DIR}:${HOME}/app
       - /etc/group:/etc/group:ro
       - /etc/passwd:/etc/passwd:ro
       - $SSH_AUTH_SOCK:/ssh-agent
     environment:
       SSH_AUTH_SOCK: /ssh-agent
-    working_dir: ${HOME}
+    working_dir: ${HOME}/app
     tty: true
